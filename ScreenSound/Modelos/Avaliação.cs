@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ScreenSound.Modelos; 
 
-namespace ScreenSound.Modelos
+internal class Avaliação
 {
-    internal class Avaliação
+    public Avaliação(int nota)
     {
+        Nota = nota;
+    }
+    public int Nota { get; }
+
+    public static Avaliação Parse(string texto)
+    {
+        int nota = int.Parse(texto);
+        return new Avaliação(nota);
     }
 }
