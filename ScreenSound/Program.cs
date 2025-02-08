@@ -1,6 +1,17 @@
 ﻿using ScreenSound.Modelos;
 using ScreenSound.Menus;
 
+Banda ira = new("Ira!");
+ira.AdicionarNota(new Avaliação(10));
+ira.AdicionarNota(new Avaliação(8));
+ira.AdicionarNota(new Avaliação(6));
+Banda beatles = new("The Beatles");
+
+
+Dictionary<string, Banda> bandasRegistradas = new();
+bandasRegistradas.Add(ira.Nome, ira);
+bandasRegistradas.Add(beatles.Nome, beatles);
+
 Dictionary<int, Menu> opcoes = new();
 opcoes.Add(1, new MenuRegistrarBanda());
 opcoes.Add(2, new MenuRegistrarAlbum());
@@ -20,7 +31,7 @@ void ExibirLogo()
 ██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░
 ");
-    Console.WriteLine("Boas vindas ao Screen Sound 2.0!");
+    Console.WriteLine("Boas vindas ao Screen Sound!");
 }
 
 void ExibirOpcoesDoMenu()
